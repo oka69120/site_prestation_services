@@ -1,0 +1,299 @@
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+/* Bannière principale */
+.hero {
+  position: relative;
+  background: url("/src/images/garde-enfants-scaled.jpg") no-repeat center/cover;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3); /* Plus foncé */
+}
+
+.hero-content {
+  background: rgba(85, 183, 71, 0.8); /* Fond blanc avec transparence */
+  padding: 20px;
+  border-radius: 10px; /* Coins arrondis */
+  display: inline-block;
+  max-width: 80%;
+  text-align: center;
+  margin-bottom: 20px;
+  border: 3px solid #1c5c2e; /* Bordure vert foncé */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Effet au survol */
+.hero-content:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 255, 100, 0.4); /* Lueur verte */
+  border-color: #28a745; /* Bordure plus vive */
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #333; /* Noir */
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* Section Présentation */
+/* Section Présentation */
+.presentation {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f9f9f9; /* Fond clair mais pas trop blanc */
+}
+
+.presentation h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #28a745; /* Vert principal */
+  margin-bottom: 15px;
+}
+
+.presentation p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #333; /* Noir doux */
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+}
+
+/* Styles pour les services */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.service {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 350px;
+  text-align: left;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-left: 4px solid #28a745; /* Ligne verte à gauche */
+}
+
+/* Effet de survol pour un léger relief */
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Titres des services */
+.service h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1c5c2e; /* Vert foncé */
+  margin-bottom: 10px;
+}
+
+/* Liste des avantages */
+.service ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin: 8px 0;
+  color: #444;
+}
+
+.service i {
+  color: #28a745; /* Icônes en vert */
+  margin-right: 10px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    max-width: 90%;
+  }
+}
+
+/* ------------------------- */
+/* Comment ça marche */
+/* ------------------------- */
+/* Section Fonctionnement */
+.fonctionnement {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+}
+
+.fonctionnement h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #28a745;
+  margin-bottom: 20px;
+}
+
+/* Conteneur des étapes */
+.etapes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Style des blocs étape */
+.etape {
+  background: #f9f9f9;
+  padding: 25px;
+  border: 1px solid #28a745; /* Bordure verte */
+  border-radius: 12px;
+  max-width: 320px;
+  text-align: center;
+  border-bottom: 4px solid #28a745;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Titre des étapes */
+.etape h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1c5c2e;
+  margin-bottom: 10px;
+}
+
+/* Texte des étapes */
+.etape p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Effet au survol */
+.etape:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .etapes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .etape {
+    max-width: 90%;
+  }
+}
+
+/* Tarifs */
+.tarifs {
+  padding: 50px 20px;
+  text-align: center;
+  background: var(--background-light);
+}
+
+.tarifs h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.tarifs table {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+.tarifs th,
+.tarifs td {
+  border: 1px solid var(--primary-color);
+  padding: 15px;
+  text-align: center;
+}
+
+.tarifs th {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* FAQ */
+.faq {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.faq h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.faq-container {
+  max-width: 700px;
+  margin: auto;
+}
+
+details {
+  background: var(--background-light);
+  padding: 15px;
+  border-radius: var(--border-radius);
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+details summary {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+details p {
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .services,
+  .etapes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service,
+  .etape {
+    max-width: 90%;
+  }
+
+  .tarifs table {
+    width: 100%;
+  }
+}

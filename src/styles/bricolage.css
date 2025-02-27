@@ -1,0 +1,324 @@
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+/* Section Bannière */
+/* Section Hero */
+.hero {
+  background: url("/public/images/bricolage-jardinage-scaled.jpg") center/cover
+    no-repeat fixed;
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 70vh;
+  max-height: 600px; /* Empêche l'image d'être trop grande sur les grands écrans */
+}
+
+/* Overlay sombre pour améliorer la lisibilité du texte */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Styles du texte pour qu'il soit au-dessus de l'overlay */
+.hero h1,
+.hero p,
+.hero .btn-underline {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    height: 65vh; /* Augmentation de la hauteur */
+    padding: 80px 15px;
+    background-attachment: scroll; /* Désactive l'effet fixe sur mobile */
+    background-size: cover; /* Ajuste l'image pour qu'elle remplisse bien la section */
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    display: none;
+  }
+
+  .btn-underline {
+    font-size: 1rem;
+    padding: 10px 10px;
+  }
+}
+
+/* Présentation */
+.presentation {
+  padding: 80px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+/* Services */
+.services {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.service {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service h3 {
+  font-size: 1.8rem;
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+.service p {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.service ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service ul li {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 15px;
+  background: #eef6f0;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.service ul li i {
+  color: #28a745;
+  font-size: 1.5rem;
+}
+
+/* Section Fonctionnement */
+.fonctionnement {
+  background: #f8f9fa;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.fonctionnement-intro {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Conteneur des étapes */
+.etapes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Style des blocs étapes */
+.etape {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+  color: white;
+  padding: 25px;
+  width: 320px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.etape:hover {
+  transform: translateY(-10px);
+}
+
+.etape h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.etape p {
+  font-size: 1.2rem;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .etapes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .etape {
+    width: 90%;
+  }
+
+  .fonctionnement-intro {
+    font-size: 1.1rem;
+  }
+}
+
+/* Section Avantages */
+.avantages {
+  background: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.avantages-intro {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Conteneur des avantages */
+.avantages-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Bloc avantage */
+.avantage {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 260px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.avantage:hover {
+  transform: translateY(-5px);
+}
+
+/* Icônes */
+.avantage i {
+  font-size: 3rem;
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+.avantage h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.avantage p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .avantages-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .avantage {
+    width: 90%;
+  }
+}
+
+/* Section Zone d’Intervention */
+.zone {
+  background: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.zone-contenu {
+  background: rgba(40, 167, 69, 0.1);
+  padding: 50px;
+  border-radius: 10px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.zone-text {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.zone .colonne {
+  padding: 10px;
+}
+
+.zone p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.zone-bouton {
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .presentation {
+    padding: 50px 15px;
+  }
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    width: 90%;
+  }
+
+  .etapes {
+    flex-direction: column;
+  }
+
+  .zone-text {
+    flex-direction: column;
+  }
+}

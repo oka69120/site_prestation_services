@@ -1,20 +1,162 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bricolage</title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="/src/styles/bricolage.css" />
     <script defer src="../router.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="header"></div>
-    
+
     <main>
-        <h1>Bricolage</h1>
-        <p>Contenu de test pour la page Bricolage.</p>
+      <section class="hero fade-in">
+        <h1>Bricolage et Jardinage à Domicile</h1>
+        <p>
+          Besoin d'un coup de main pour vos petits travaux ou l'entretien de
+          votre jardin ? Nos experts sont là pour vous aider.
+        </p>
+        <a href="#" class="btn-underline">Obtenez votre devis gratuit</a>
+      </section>
+      <section class="presentation">
+        <h2>Nos Services</h2>
+        <p>
+          Des prestations adaptées à vos besoins pour un domicile parfaitement
+          entretenu.
+        </p>
+
+        <div class="services fade-in">
+          <div class="service bricolage">
+            <h3>Service de Bricolage</h3>
+            <p>Réalisation de petits travaux pour améliorer votre confort.</p>
+            <ul>
+              <li><i class="fas fa-tools"></i> Montage de meubles</li>
+              <li>
+                <i class="fas fa-hammer"></i> Petites réparations domestiques
+              </li>
+              <li>
+                <i class="fas fa-paint-roller"></i> Peinture et revêtements
+              </li>
+              <li><i class="fas fa-wrench"></i> Petits travaux de plomberie</li>
+            </ul>
+            <a href="#" class="btn-underline">Découvrir nos services</a>
+          </div>
+
+          <div class="service jardinage">
+            <h3>Service de Jardinage</h3>
+            <p>
+              Un jardin bien entretenu pour profiter pleinement de vos espaces
+              extérieurs.
+            </p>
+            <ul>
+              <li>
+                <i class="fas fa-seedling"></i> Tonte de pelouse et entretien
+              </li>
+              <li><i class="fas fa-tree"></i> Taille des haies et arbustes</li>
+              <li><i class="fas fa-leaf"></i> Ramassage des feuilles mortes</li>
+              <li>
+                <i class="fas fa-water"></i> Arrosage et soins des plantes
+              </li>
+            </ul>
+            <a href="#" class="btn-underline">Découvrir nos services</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="fonctionnement fade-in">
+        <h2>Comment ça marche ?</h2>
+        <p class="fonctionnement-intro">
+          Un processus simple et efficace pour un service de qualité.
+        </p>
+        <div class="etapes">
+          <div class="etape">
+            <h3>1. Demandez un devis</h3>
+            <p>
+              Remplissez notre formulaire en ligne pour nous faire part de vos
+              besoins.
+            </p>
+          </div>
+          <div class="etape">
+            <h3>2. Intervention à domicile</h3>
+            <p>
+              Nos experts interviennent chez vous à la date et l'heure
+              convenues.
+            </p>
+          </div>
+          <div class="etape">
+            <h3>3. Profitez du résultat</h3>
+            <p>Un service réalisé avec soin pour votre satisfaction.</p>
+          </div>
+        </div>
+        <div>
+          <a href="#" class="btn-underline">Demandez votre Devis</a>
+        </div>
+      </section>
+
+      <section class="avantages fade-in">
+        <h2>Pourquoi nous choisir ?</h2>
+        <p class="avantages-intro">
+          Nos clients nous font confiance pour notre expertise et notre
+          engagement envers un service de qualité.
+        </p>
+        <div class="avantages-container">
+          <div class="avantage">
+            <i class="fas fa-user-shield"></i>
+            <h3>Professionnalisme garanti</h3>
+            <p>
+              Nos artisans sont qualifiés et expérimentés pour assurer un
+              travail impeccable.
+            </p>
+          </div>
+          <div class="avantage">
+            <i class="fas fa-clock"></i>
+            <h3>Intervention rapide</h3>
+            <p>
+              Disponibilité flexible pour répondre à vos besoins à tout moment.
+            </p>
+          </div>
+          <div class="avantage">
+            <i class="fas fa-tools"></i>
+            <h3>Matériel de qualité</h3>
+            <p>
+              Nous utilisons des outils et équipements professionnels pour
+              chaque prestation.
+            </p>
+          </div>
+          <div class="avantage">
+            <i class="fas fa-thumbs-up"></i>
+            <h3>Satisfaction garantie</h3>
+            <p>
+              Un service fiable et un accompagnement personnalisé pour chaque
+              client.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Avantages -->
+      <section class="zone fade-in">
+        <div class="zone-contenu">
+          <h2>Notre Zone d’Intervention</h2>
+          <div class="zone-text">
+            <div class="colonne">
+              <p>
+                Nous intervenons dans toute la région de Lyon et ses environs.
+              </p>
+              <p>
+                Contactez-nous pour vérifier notre disponibilité dans votre
+                secteur.
+              </p>
+            </div>
+          </div>
+          <div class="zone-bouton">
+            <a href="#" class="btn-underline">Contactez-nous</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <div id="footer"></div>
-</body>
+  </body>
 </html>

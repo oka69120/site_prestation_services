@@ -17,7 +17,6 @@ document.getElementById("header").innerHTML = `
     </div>
 </header>
 `;
-
 // Animation GSAP
 gsap.from("header", { duration: 1, y: -50, opacity: 0, ease: "bounce" });
 // Fonction pour gérer l'affichage du menu mobile
@@ -51,6 +50,4 @@ function toggleMenu() {
     navLinks.classList.add("nav-active");
     burger.classList.add("change");
   }
-
-  bars.forEach((bar) => bar.classList.toggle("change"));
 }

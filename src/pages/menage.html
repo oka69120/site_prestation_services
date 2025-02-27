@@ -1,20 +1,235 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menage</title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="/src/styles/menage.css" />
     <script defer src="../router.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="header"></div>
-    
+
     <main>
-        <h1>Menage</h1>
-        <p>Contenu de test pour la page Menage.</p>
+      <!-- Bannière Principale -->
+      <section class="hero fade-in">
+        <h1>Un intérieur impeccable, sans effort !</h1>
+        <p>
+          Vous rêvez d'une maison propre et saine sans avoir à vous en soucier ?
+          Notre service de nettoyage à domicile vous offre une solution
+          professionnelle, rapide et efficace pour vous permettre de profiter
+          d'un intérieur impeccable.
+        </p>
+
+        <!-- <a href="#" class="btn-action">Obtenez votre devis gratuit</a> -->
+        <a href="#" class="btn-underline">Obtenez votre devis gratuit</a>
+      </section>
+
+      <!-- Section Présentation des Services -->
+      <section class="presentation fade-in">
+        <h2>Nos Services de Nettoyage et Repassage</h2>
+        <p>
+          Profitez d'un intérieur impeccable avec nos prestations sur-mesure.
+        </p>
+
+        <div class="services">
+          <!-- Bloc Nettoyage -->
+          <div class="service nettoyage">
+            <h3>Service de Nettoyage</h3>
+            <p>
+              Un ménage professionnel pour un intérieur toujours propre et sain.
+            </p>
+            <ul>
+              <li>
+                <i class="fas fa-check-circle"></i> Nettoyage complet de votre
+                domicile
+              </li>
+              <li>
+                <i class="fas fa-leaf"></i> Utilisation de produits écologiques
+              </li>
+              <li>
+                <i class="fas fa-clock"></i> Disponibilité 7j/7 selon vos
+                besoins
+              </li>
+              <li>
+                <i class="fas fa-user-shield"></i> Agents qualifiés et de
+                confiance
+              </li>
+              <a href="#" class="btn-underline">Découvrir nos services</a>
+            </ul>
+          </div>
+
+          <!-- Bloc Repassage -->
+          <div class="service repassage">
+            <h3>Service de Repassage</h3>
+            <p>Un linge impeccable sans effort, repassé avec soin.</p>
+            <ul>
+              <li><i class="fas fa-tshirt"></i> Repassage précis et soigné</li>
+              <li>
+                <i class="fas fa-hands-wash"></i> Prise en charge de tous types
+                de tissus
+              </li>
+              <li>
+                <i class="fas fa-clock"></i> Gain de temps pour votre quotidien
+              </li>
+              <li>
+                <i class="fas fa-truck"></i> Service à domicile pour plus de
+                confort
+              </li>
+              <a href="#" class="btn-underline">Découvrir nos services</a>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comment Ça Marche -->
+      <section class="fonctionnement fade-in">
+        <h2>Comment ça marche ?</h2>
+        <p>
+          Nous avons simplifié le processus pour que vous puissiez profiter de
+          nos services en toute tranquillité :
+        </p>
+        <div class="etapes">
+          <div class="etape">
+            <h3>1. Réservez votre nettoyage</h3>
+            <p>
+              Remplissez notre formulaire en ligne ou contactez-nous directement
+              pour définir vos besoins.
+            </p>
+          </div>
+          <div class="etape">
+            <h3>2. Intervention à domicile</h3>
+            <p>
+              Nos agents de nettoyage qualifiés se déplacent chez vous à la date
+              et l'heure convenues.
+            </p>
+          </div>
+          <div class="etape">
+            <h3>3. Profitez de votre espace propre</h3>
+            <p>
+              Votre intérieur est nettoyé avec soin pour vous offrir un
+              environnement agréable et sain.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Zone d'Intervention -->
+      <section class="zone fade-in">
+        <div class="zone-contenu">
+          <h2>Notre Zone d’Intervention</h2>
+          <div class="zone-text">
+            <div class="colonne">
+              <p>
+                Nous proposons nos services dans toute la
+                <strong>région lyonnaise</strong>. Que vous soyez à
+                <strong>Lyon, Villeurbanne, Bron, Vénissieux</strong> ou dans
+                les communes voisines, notre équipe intervient avec
+                <strong>professionnalisme</strong> et
+                <strong>réactivité</strong>.
+              </p>
+              <p>
+                Nos prestations sont pensées pour vous offrir une solution
+                <strong>flexible</strong> et adaptée à votre emploi du temps.
+                Nous nous déplaçons à domicile selon vos disponibilités, que ce
+                soit en <strong>semaine</strong> ou le
+                <strong>week-end</strong>, afin de répondre à vos besoins
+                <strong>sans contrainte</strong>.
+              </p>
+            </div>
+            <div class="colonne">
+              <p>
+                Grâce à notre <strong>ancrage local</strong>, nous garantissons
+                des interventions <strong>rapides</strong> et efficaces. Nos
+                agents sont formés pour offrir un service
+                <strong>fiable</strong>, en respectant des standards de
+                <strong>qualité élevés</strong>.
+              </p>
+              <p>
+                Vous souhaitez savoir si nous couvrons votre secteur ?
+                <strong>Contactez-nous</strong> et nous nous ferons un plaisir
+                de vous répondre rapidement et de trouver la meilleure solution
+                pour vous. Nous étudierons chaque demande avec
+                <strong>attention</strong> afin de vous apporter une réponse
+                <strong>adaptée</strong>.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bouton d'appel à l'action -->
+          <div class="zone-bouton">
+            <a href="#" class="btn-underline"
+              >Vérifier ma zone d'intervention</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Section FAQ -->
+      <section class="faq fade-in">
+        <h2>Questions Fréquentes</h2>
+
+        <div class="faq-container">
+          <details>
+            <summary>📌 Quels services proposez-vous ?</summary>
+            <p>
+              Nous proposons des services de nettoyage et de repassage à
+              domicile sur toute la région lyonnaise. Nos prestations sont
+              flexibles et adaptées à vos besoins.
+            </p>
+          </details>
+
+          <details>
+            <summary>📅 Quels sont vos horaires d'intervention ?</summary>
+            <p>
+              Nous intervenons 7j/7 selon vos disponibilités, en semaine, le
+              week-end et même en soirée pour s'adapter à votre emploi du temps.
+            </p>
+          </details>
+
+          <details>
+            <summary>💰 Quels sont vos tarifs ?</summary>
+            <p>
+              Nos tarifs varient en fonction du type de service et de la
+              fréquence des interventions. Contactez-nous pour un devis
+              personnalisé.
+            </p>
+          </details>
+          <details>
+            <summary>
+              💶 Puis-je bénéficier d'un crédit d'impôt de 50% ?
+            </summary>
+            <p>
+              Oui, en tant que service à la personne, nos prestations ouvrent
+              droit à un <strong>crédit d'impôt de 50%</strong>. Cela signifie
+              que vous pouvez récupérer
+              <strong>la moitié des sommes dépensées</strong> sous forme de
+              réduction ou de remboursement d'impôt. Cette aide est accessible à
+              tous, que vous soyez imposable ou non.
+            </p>
+          </details>
+
+          <details>
+            <summary>📍 Dans quelles zones intervenez-vous ?</summary>
+            <p>
+              Nous couvrons Lyon et ses environs : Villeurbanne, Bron,
+              Vénissieux, Oullins, Écully et bien d'autres communes. Vérifiez
+              votre zone d'intervention sur notre site.
+            </p>
+          </details>
+
+          <details>
+            <summary>📞 Comment réserver un service ?</summary>
+            <p>
+              Vous pouvez réserver en ligne via notre formulaire ou nous
+              contacter directement par téléphone pour organiser une
+              intervention.
+            </p>
+          </details>
+        </div>
+      </section>
     </main>
 
     <div id="footer"></div>
-</body>
+  </body>
 </html>

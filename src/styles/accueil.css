@@ -1,0 +1,733 @@
+/* session1 */
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* 100% de la hauteur de l'écran */
+  background-image: url("/public/images/reseau_aide_a_dom.jpg");
+  background-size: cover; /* L'image couvre toute la zone */
+  background-position: left center; /* Garde la gauche visible */
+  background-repeat: no-repeat; /* Pas de répétition */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Aligne le texte à droite */
+  justify-content: center;
+  text-align: right;
+  color: white;
+  padding: 50px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Réduction de l’image */
+@keyframes shrinkImage {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 60%; /* Réduit à 60% en gardant la gauche */
+  }
+}
+
+.hero.shrink {
+  animation: shrinkImage 1.5s ease forwards;
+}
+
+/* Conteneur du texte */
+.hero-content {
+  max-width: 40%; /* Le texte occupe 40% de l'écran */
+  z-index: 2; /* Garde le texte au-dessus */
+}
+
+/* Effet de superposition pour un meilleur contraste */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.6) 85%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+  .hero::before {
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Filtre noir uniforme */
+  }
+}
+
+/* Style du texte */
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+/* 📱 Ajustement pour mobile */
+@media screen and (max-width: 768px) {
+  .hero {
+    align-items: center; /* Centre le texte uniquement sur petits écrans */
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%; /* Évite que le texte prenne toute la largeur */
+  }
+
+  .hero h1 {
+    font-size: 2.5rem; /* Réduit la taille du titre sur mobile */
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin: 40px 40px;
+  }
+}
+/* 🔥 Style du H1 de la section Hero */
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+/* 🆕 Effet de soulignement minimaliste */
+.hero-title::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #55b747;
+  margin: 10px auto 0;
+  transition: width 0.3s ease-in-out;
+}
+
+/* 🆕 Effet au survol */
+.hero-title:hover::before {
+  width: 50%;
+}
+
+/* 📱 Responsive pour mobile */
+@media screen and (max-width: 768px) {
+  .hero-title {
+    margin: 20px;
+    font-size: 2.5rem;
+    margin-top: 20px;
+  }
+}
+
+/* 🔥 Conteneur des images dans hero-title */
+.hero-images {
+  display: flex;
+  gap: 40px; /* Espace entre les images */
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+}
+
+/* 🔥 Style des images */
+.hero-images img {
+  width: 48%; /* Chaque image prend environ la moitié de la largeur */
+  height: auto;
+  border-radius: 10px; /* Coins arrondis pour un effet plus esthétique */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 🆕 Effet au survol */
+.hero-images img:hover {
+  transform: scale(1.05); /* Légère animation au survol */
+}
+
+/* 📱 Masquage des images sur mobile */
+@media screen and (max-width: 768px) {
+  .hero-images {
+    display: none;
+  }
+}
+
+/* Section Services */
+
+.services {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  color: #55b747;
+  margin-bottom: 40px;
+}
+
+/* Conteneur des services */
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* Style des cartes */
+.service-card {
+  background: white;
+  border-radius: 10px;
+  border: 3px solid rgba(85, 183, 71, 0.5); /* Contour épuré */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 400px;
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    background 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* 🆕 Effet de soulignement minimaliste */
+.service-card h3::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #55b747;
+  margin: 10px auto 0;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Effet au survol */
+.service-card:hover {
+  border-color: #55b747; /* Accentuation du contour */
+  box-shadow: 0 6px 15px rgba(85, 183, 71, 0.2); /* Effet de relief */
+  transform: translateY(-5px); /* Légère élévation */
+}
+
+/* Animation de lumière */
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+/* Effet d’agrandissement de l’image au survol */
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Effet zoom sur le texte */
+.service-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 15px 0;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.service-card:hover h3 {
+  transform: scale(1.1);
+  color: #55b747;
+}
+
+/* Ajout d’un effet de glow */
+.service-card:hover {
+  box-shadow: 0px 0px 15px rgba(255, 204, 68, 0.7);
+}
+
+/* Section Pourquoi Nous Choisir */
+.why-choose-us {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #fccc44, #55b747);
+  color: white; /* 🔥 Force le texte en blanc */
+  position: relative;
+}
+
+/* Amélioration de la lisibilité */
+.why-choose-us p,
+.why-choose-us h3 {
+  color: #000;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 🔥 Ajoute une ombre légère pour contraste */
+}
+
+.why-choose-us h2 {
+  font-size: 2.5rem;
+  color: #55b747;
+  margin-bottom: 40px;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Ligne centrale */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background-color: #fccc44;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Éléments de la timeline */
+.timeline-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Alignement à gauche */
+.timeline-item.left .timeline-content {
+  text-align: right;
+  margin-right: auto;
+}
+
+.timeline-item.left .timeline-icon {
+  order: 2; /* Inverse l'ordre pour mettre l'icône après le texte */
+}
+
+/* Alignement à droite */
+.timeline-item.right .timeline-content {
+  text-align: left;
+  margin-left: auto;
+}
+
+/* Contenu des blocs */
+.timeline-content {
+  border: 2px solid rgba(85, 183, 71, 0.5); /* Contour épuré */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Icônes */
+.timeline-icon {
+  border: 5px solid rgba(85, 183, 71, 0.5); /* Contour épuré */
+  width: 50px;
+  height: 50px;
+  background-color: #fccc44;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Animation au survol */
+.timeline-content:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 📱 Version Mobile : Affichage en colonne */
+@media screen and (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .timeline-content {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .timeline-icon {
+    display: none;
+  }
+}
+
+/* -------------------------------------- */
+/* Section Zone d'Intervention */
+/* --------------------------------------- */
+/* Section Zone d'Intervention */
+.zone-intervention {
+  padding: 80px 5%;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Titre centré */
+.zone-intervention h2 {
+  font-size: 2.5rem;
+  color: #55b747;
+  margin-bottom: 40px;
+}
+
+/* Wrapper pour aligner texte et image */
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 50px;
+}
+
+/* Texte à gauche */
+.zone-text {
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+  padding: 20px;
+}
+
+.zone-text p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* 🔥 Image en arrière-plan à droite */
+.zone-image {
+  flex: 1;
+  height: 400px;
+  background: url("/public/images/carte-rhone-lyon.png") no-repeat center
+    center/cover;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* Effet de superposition pour améliorer la lisibilité */
+.zone-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Assombrit légèrement l'image */
+  border-radius: 10px;
+}
+
+/* 🔥 RESPONSIVE DESIGN 🔥 */
+@media screen and (max-width: 1024px) {
+  .content-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .zone-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .zone-image {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .zone-intervention {
+    padding: 60px 5%;
+  }
+
+  .zone-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .zone-text p {
+    font-size: 1rem;
+  }
+
+  .zone-image {
+    height: 250px;
+  }
+}
+
+/* 🔥 Section Témoignages Clients avec Fond */
+.testimonials {
+  text-align: center;
+  padding: 80px 5%;
+  background: linear-gradient(135deg, #f9f9f9, #eaf3e2); /* Dégradé subtil */
+  position: relative;
+}
+
+/* 🌟 Ajout d'une texture subtile en option */
+.testimonials::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("src/images/pattern.png") repeat;
+  opacity: 0.1; /* Texture très légère */
+  z-index: 0;
+}
+
+/* Titre */
+.testimonials h2 {
+  font-size: 2.5rem;
+  color: #55b747;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Conteneur des témoignages */
+.testimonials-container {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Témoignage */
+.testimonial {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: scale(0.9);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 700px;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Témoignage actif */
+.testimonial.active {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+  position: relative;
+}
+
+/* Texte du témoignage */
+.testimonial p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Nom du client */
+.testimonial h4 {
+  font-size: 1.2rem;
+  color: #55b747;
+  font-weight: bold;
+}
+
+/* 🔥 Boutons de navigation */
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #55b747;
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Position des boutons */
+.prev-btn {
+  left: 10%;
+}
+.next-btn {
+  right: 10%;
+}
+
+/* Effet au survol */
+.prev-btn:hover,
+.next-btn:hover {
+  background: #fccc44;
+  transform: scale(1.1);
+}
+
+/* 🔥 Responsive */
+@media screen and (max-width: 768px) {
+  .testimonials-container {
+    max-width: 90%;
+  }
+
+  .prev-btn {
+    left: 5%;
+  }
+
+  .next-btn {
+    right: 5%;
+  }
+
+  .testimonial p {
+    font-size: 1rem;
+  }
+}
+/* Conteneur du formulaire */
+
+/* 🔥 Ajustement de la taille du formulaire sur tablette */
+@media screen and (max-width: 1024px) {
+  .contact-form {
+    max-width: 90%; /* Augmente la largeur */
+    padding: 40px; /* Ajoute plus d’espace */
+  }
+
+  .form-control {
+    font-size: 1.1rem; /* Agrandit les champs */
+    padding: 14px; /* Meilleur confort d'utilisation */
+  }
+
+  .btn-primary {
+    font-size: 1.3rem; /* Agrandit le bouton */
+    padding: 14px; /* Plus facile à cliquer */
+  }
+}
+
+/* 🔥 Ajustement pour les mobiles */
+@media screen and (max-width: 768px) {
+  .contact-form {
+    max-width: 100%;
+    padding: 30px;
+  }
+}
+
+.contact-section {
+  padding: 80px 5%;
+  background: url("/public/images/photo-formulaire.jpg") no-repeat center
+    center/cover;
+  position: relative;
+  text-align: center;
+}
+
+/* 🎨 Ajout d’un effet de flou et de superposition */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Couche semi-transparente */
+  backdrop-filter: blur(5px); /* Effet de flou */
+  z-index: 0;
+}
+
+/* 🔥 Assurer que le contenu reste au-dessus du fond */
+.contact-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Titre et sous-titre */
+.section-title {
+  font-size: 2.5rem;
+  color: #55b747;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+/* Formulaire */
+.contact-form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Champs */
+.input-group-text {
+  background: #55b747;
+  color: white;
+  border: none;
+}
+
+.form-control {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Style du champ de sélection */
+select.form-control {
+  cursor: pointer;
+}
+
+/* Bouton Envoyer */
+.btn-primary {
+  background: #55b747;
+  border: none;
+  padding: 12px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: #fccc44;
+}

@@ -1,0 +1,396 @@
+/* ---- Section Hero avec image de fond ---- */
+/* Cache les sections au début */
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.hero {
+  background: url("/public/images/aide-bg.jpg") no-repeat center center/cover
+    fixed;
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 70vh; /* Ajuste la hauteur pour bien afficher l’image */
+}
+
+/* Ajout d'un overlay sombre pour améliorer la lisibilité */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Ajout d’un filtre sombre */
+  z-index: 1;
+}
+
+/* Le texte doit être au-dessus de l’overlay */
+.hero h1,
+.hero p,
+.btn-action {
+  position: relative;
+  z-index: 2;
+}
+.hero h1 {
+  font-size: 5rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+/* ✅ Optimisation Mobile */
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh; /* Réduction de la hauteur pour voir plus de contenu */
+    padding: 10px 15px; /* Moins d’espace en haut et en bas */
+    background-attachment: scroll; /* Évite l’effet de fixation de l’image sur mobile */
+  }
+
+  .hero h1 {
+    font-size: 20px;
+  }
+  .hero p {
+    display: none;
+  }
+
+  .btn-action {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+/* ---- Section Présentation des Services ---- */
+.presentation {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.presentation h2 {
+  font-size: 2.5em;
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+.presentation p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* ---- Carte des Services ---- */
+.services {
+  max-width: 1100px; /* Limite la largeur */
+  margin: auto; /* Centre la section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.service {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  min-width: 280px;
+  flex: 1; /* Permet aux blocs d’avoir la même hauteur */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Équilibre le contenu à l'intérieur */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Effet hover sur les cartes */
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.service h3 {
+  font-size: 1.8rem;
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+.service p {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Icônes des services */
+.service ul {
+  list-style: none;
+  padding: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre la liste */
+}
+
+.service ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 15px;
+  background: #eef6f0;
+  border-radius: 8px;
+  width: 100%; /* Prend toute la largeur disponible */
+  max-width: 400px; /* Évite que la liste soit trop large */
+  text-align: left; /* Alignement du texte à gauche */
+}
+
+.service ul li i {
+  color: #28a745;
+  font-size: 1.5rem;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Section Fonctionnement */
+
+.fonctionnement {
+  background: #f9f9f9;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Titre et description */
+.fonctionnement h2 {
+  margin-bottom: 20px;
+}
+
+.fonctionnement p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Nouvelle structure : affichage en ligne */
+.etapes {
+  max-width: 1100px; /* Limite la largeur */
+  margin: auto; /* Centre la section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* Style des blocs d'étapes */
+.etape {
+  border: 2px solid rgba(40, 167, 69, 0.3); /* Bordure verte légère */
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  width: 30%;
+  min-width: 280px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+/* Effet de hover */
+.etape:hover {
+  transform: translateY(-10px);
+  border-color: #28a745; /* Bordure plus marquée */
+}
+
+/* Numérotation des étapes en fond */
+.etape::before {
+  content: attr(data-step);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgba(40, 167, 69, 0.15);
+}
+
+/* Titre des étapes */
+.etape h3 {
+  font-size: 1.6rem;
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+/* Paragraphe d’explication */
+.etape p {
+  font-size: 1.1rem;
+  color: #333;
+  flex-grow: 1;
+}
+
+/* Responsive : Passage en colonne */
+@media (max-width: 768px) {
+  .etapes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .etape {
+    width: 100%;
+  }
+}
+
+/* 📌 Nouvelle structure pour la section Zone d’Intervention */
+.zone {
+  background: #f8f9fa;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.zone-contenu {
+  background: white;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: auto;
+  border: 2px solid rgba(40, 167, 69, 0.3); /* Bordure verte légère */
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out,
+    border-color 0.3s ease-in-out;
+}
+
+/* Effet d’apparition */
+.zone.visible .zone-contenu {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Disposition en deux colonnes */
+.zone-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+/* Style des colonnes */
+.zone .colonne {
+  padding: 10px;
+}
+
+/* Texte */
+.zone p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* 📍 Ajout d’une icône de localisation avant le titre */
+.zone h2::before {
+  content: "📍";
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* 🔥 Effet d'animation au survol */
+.zone-contenu:hover {
+  border-color: #28a745; /* Bordure plus marquée */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive : Une seule colonne sur mobile */
+@media (max-width: 768px) {
+  .zone-text {
+    grid-template-columns: 1fr; /* Passe en une seule colonne */
+  }
+
+  .zone-contenu {
+    padding: 30px;
+  }
+
+  .zone p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Section FAQ */
+.faq {
+  padding: 80px 20px;
+  /* background: white; */
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Conteneur des questions */
+.faq-container {
+  text-align: left;
+}
+
+/* Style des questions */
+.faq-container details {
+  background: rgba(40, 167, 69, 0.1);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Effet au survol */
+.faq-container details:hover {
+  background: rgba(40, 167, 69, 0.2);
+  transform: scale(1.02);
+}
+
+/* Titre de la question */
+.faq-container summary {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #28a745;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  list-style: none;
+}
+
+/* Masquer la flèche par défaut */
+.faq-container summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Réponse (cachée par défaut) */
+.faq-container p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-top: 10px;
+  line-height: 1.6;
+}

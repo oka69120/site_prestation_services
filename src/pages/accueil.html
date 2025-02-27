@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accueil</title>
-    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/accueil.css" />
     <script defer src="../router.js"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Muli:300,400,700&display=swap"
@@ -14,15 +14,324 @@
       src="https://kit.fontawesome.com/83f4286022.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="/src/styles/accueil.css" />
   </head>
   <body>
     <div id="header"></div>
 
     <main>
-      <h1>Accueil</h1>
-      <p>Contenu de test pour la page Accueil.</p>
-    </main>
+      <div id="header-container"></div>
+      <body>
+      <section class="hero fade-in">
+        <div class="hero-content">
+          <div class="hero-title">
+            <h1>Bienvenue chez RESEAU D'AIDE A DOMICILE</h1>
+            <p>
+              Des services à domicile de qualité, adaptés à vos besoins du
+              quotidien.
+            </p>
+            <a href="#" class="btn-underline">Découvrir nos services</a>
+          </div>
+          <div class="hero-images">
+            <img src="/public/images/credit-impot-50.png" alt="Image 1">
+            <img src="/public/images/service-a-la-personne.png" alt="Image 2">
+        </div>
+      </section>
+    </section>
+    <!-- session services -->
+    <section class="services fade-in">
+      <h2>Nos Services</h2>
+      <div class="services-container">
+        <!-- Service 1 -->
+        <div class="service-card" onclick="window.location.href='menage.html'">
+          <img src="/public/images/menage.png" alt="Ménage & Repassage" />
+          <h3>Ménage & Repassage</h3>
+          <p>Des professionnels pour un intérieur impeccable et soigné.</p>
+        </div>
 
+        <!-- Service 2 -->
+        <div
+          class="service-card"
+          onclick="window.location.href='garderie.html'"
+        >
+          <img src="/public/images/garde-enfant-2.png" alt="Garde d'Enfants" />
+          <h3>Garde d'Enfants</h3>
+          <p>Un accompagnement bienveillant pour vos petits trésors.</p>
+        </div>
+
+        <!-- Service 3 -->
+        <div
+          class="service-card"
+          onclick="window.location.href='aide-personne.html'"
+        >
+          <img
+            src="/public/images/Aide-a-la-personne.png"
+            alt="Aide à la Personne"
+          />
+          <h3>Aide à la Personne</h3>
+          <p>Un soutien quotidien pour améliorer le confort de vie.</p>
+        </div>
+
+        <!-- Service 4 -->
+        <div
+          class="service-card"
+          onclick="window.location.href='bricolage.html'"
+        >
+          <img src="/public/images/Jardinage.png" alt="Bricolage & Jardinage" />
+          <h3>Bricolage & Jardinage</h3>
+          <p>Petits travaux et entretien de vos espaces verts.</p>
+        </div>
+      </div>
+    </section>
+    <section class="why-choose-us fade-in">
+      <h2>Pourquoi nous choisir ?</h2>
+      <div class="timeline">
+        <!-- Étape 0 -->
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <h3>50% de réduction d'impôt</h3>
+            <p>
+              Profitez d’un crédit d’impôt de 50% sur vos dépenses en services à la personne. Réduction immédiate ou déduction fiscale.
+            </p>
+          </div>
+          <div class="timeline-icon"><i class="fas fa-piggy-bank"></i></div>
+        </div>
+        <!-- Étape 1 -->
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <h3>Service de Qualité</h3>
+            <p>
+              Nos experts sont formés pour vous offrir un service irréprochable
+              et professionnel.
+            </p>
+          </div>
+          <div class="timeline-icon"><i class="fas fa-star"></i></div>
+        </div>
+
+        <!-- Étape 2 -->
+        <div class="timeline-item right">
+          <div class="timeline-icon"><i class="fas fa-clock"></i></div>
+          <div class="timeline-content">
+            <h3>Disponibilité 7j/7</h3>
+            <p>
+              Nous sommes disponibles à tout moment, même les week-ends et jours
+              fériés.
+            </p>
+          </div>
+        </div>
+
+        <!-- Étape 3 -->
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <h3>Satisfaction Garantie</h3>
+            <p>
+              Nous nous engageons à répondre à vos besoins avec un service
+              adapté et soigné.
+            </p>
+          </div>
+          <div class="timeline-icon"><i class="fas fa-smile"></i></div>
+        </div>
+
+        <!-- Étape 4 -->
+        <div class="timeline-item right">
+          <div class="timeline-icon"><i class="fas fa-shield-alt"></i></div>
+          <div class="timeline-content">
+            <h3>Personnel de Confiance</h3>
+            <p>
+              Nos agents sont qualifiés et vérifiés pour garantir votre
+              sérénité.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="zone-intervention fade-in">
+      <h2>Nos Zones d'Intervention</h2>
+
+      <div class="content-wrapper">
+        <!-- Texte à gauche -->
+        <div class="zone-text">
+          <p>
+            Nous proposons nos services de
+            <strong
+              >ménage, garde d'enfants, aide à la personne et bricolage</strong
+            >
+            exclusivement en <strong>région lyonnaise</strong>. Nos équipes sont
+            basées dans plusieurs communes de la métropole de Lyon, ce qui nous
+            permet d’être <strong>réactifs et disponibles rapidement</strong>.
+          </p>
+          <p>
+            Nos agents qualifiés interviennent à
+            <strong
+              >Lyon, Villeurbanne, Vénissieux, Bron, Saint-Priest, Oullins,
+              Caluire-et-Cuire, Écully</strong
+            >
+            et bien d’autres communes environnantes.
+          </p>
+          <p>
+            Contactez-nous dès aujourd’hui pour un
+            <strong>service rapide, efficace et adapté à vos besoins</strong>.
+          </p>
+
+          <!-- 🔥 Bouton d'Appel à l'Action Modernisé -->
+          <a href="#" class="btn-underline">Découvrir nos services</a>
+        </div>
+
+        <!-- Fond d'image sur la partie droite -->
+        <div class="zone-image"></div>
+      </div>
+    </section>
+    <section class="testimonials fade-in">
+      <h2>Ce que disent nos clients</h2>
+
+      <div class="testimonials-container">
+        <!-- Témoignages -->
+        <div class="testimonial active">
+          <p>
+            "Un service impeccable ! Les agents sont très professionnels et
+            ponctuels. Je recommande à 100%."
+          </p>
+          <h4>- Sophie M.</h4>
+        </div>
+
+        <div class="testimonial">
+          <p>
+            "J'ai fait appel à eux pour du ménage à domicile et je suis ravie !
+            Travail soigné et efficace."
+          </p>
+          <h4>- David P.</h4>
+        </div>
+
+        <div class="testimonial">
+          <p>
+            "Une équipe sympathique et sérieuse. Toujours à l'écoute et très
+            réactive. Merci pour votre aide !"
+          </p>
+          <h4>- Nadia K.</h4>
+        </div>
+
+        <div class="testimonial">
+          <p>
+            "Le personnel est qualifié et très respectueux. Une vraie
+            tranquillité d’esprit pour nos besoins."
+          </p>
+          <h4>- Julien R.</h4>
+        </div>
+
+        <div class="testimonial">
+          <p>
+            "Des services de qualité avec une grande flexibilité. Je suis
+            entièrement satisfait !"
+          </p>
+          <h4>- Claire B.</h4>
+        </div>
+      </div>
+
+      <!-- Boutons de navigation -->
+      <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+      <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+    </section>
+
+    <!-- 🔥 Section Contact -->
+
+    <section class="contact-section fade-in">
+      <div class="container">
+        <div class="row justify-content-center">
+          <!-- Titre -->
+          <div class="col-md-8 text-center">
+            <h2 class="section-title">Contactez-nous</h2>
+            <p class="section-subtitle">
+              Remplissez le formulaire ci-dessous et nous vous répondrons
+              rapidement.
+            </p>
+          </div>
+
+          <!-- Formulaire -->
+          <div class="col-md-6">
+            <div class="contact-form">
+              <form id="contactForm">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Nom</label>
+                  <div class="input-group">
+                    <span class="input-group-text"
+                      ><i class="fas fa-user"></i
+                    ></span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      placeholder="Votre nom"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <div class="input-group">
+                    <span class="input-group-text"
+                      ><i class="fas fa-envelope"></i
+                    ></span>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Votre email"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Nouveau champ Service -->
+                <div class="mb-3">
+                  <label for="service" class="form-label"
+                    >Service souhaité</label
+                  >
+                  <div class="input-group">
+                    <span class="input-group-text"
+                      ><i class="fas fa-list"></i
+                    ></span>
+                    <select class="form-control" id="service" required>
+                      <option value="">Sélectionnez un service</option>
+                      <option value="ménage">Ménage</option>
+                      <option value="garde">Garde d'enfants</option>
+                      <option value="aide">Aide à la personne</option>
+                      <option value="bricolage">Bricolage</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <div class="input-group">
+                    <span class="input-group-text"
+                      ><i class="fas fa-comment-dots"></i
+                    ></span>
+                    <textarea
+                      class="form-control"
+                      id="message"
+                      rows="4"
+                      placeholder="Votre message"
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">
+                  Envoyer <i class="fas fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    </main>
+    <script defer src="/src/js/aide.js"></script>
     <div id="footer"></div>
   </body>
 </html>

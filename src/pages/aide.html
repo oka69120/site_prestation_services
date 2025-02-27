@@ -1,20 +1,183 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aide</title>
-    <link rel="stylesheet" href="../styles/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aide à Domicile</title>
     <script defer src="../router.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="src/styles/aide.css" />
+  </head>
+  <body>
     <div id="header"></div>
-    
     <main>
-        <h1>Aide</h1>
-        <p>Contenu de test pour la page Aide.</p>
-    </main>
+      <section class="hero fade-in">
+          <h1>Une aide précieuse au quotidien</h1>
+          <p>
+            Nos assistants de vie vous accompagnent pour rendre votre quotidien
+            plus serein : aide aux personnes âgées, assistance administrative,
+            accompagnement, courses et bien plus encore.
+          </p>
+          <a href="#" class="btn-underline">Découvrir nos services</a>
+        </div>
+      </section>
+      <!-- Présentation des Services -->
+      <section class="presentation fade-in">
+        <h2>Nos Services d'Aide à la Personne</h2>
+        <p>
+          Nous mettons à votre disposition des services adaptés à vos besoins.
+        </p>
+        <div class="services">
+        <!-- Service 1 : Aide aux personnes âgées -->
+        <div class="service">
+          <h3>Aide aux Personnes Âgées</h3>
+          <p>Un accompagnement quotidien pour favoriser l'autonomie.</p>
+          <ul>
+            <li>
+              <i class="fas fa-user-friends"></i> Assistance à la mobilité
+            </li>
+            <li><i class="fas fa-utensils"></i> Aide aux repas</li>
+            <li><i class="fas fa-home"></i> Aide au ménage léger</li>
+            <li>
+              <i class="fas fa-heart"></i> Présence et écoute bienveillante
+            </li>
+          </ul>
+          <a href="#" class="btn-underline">En savoir plus</a>
+        </div>
 
+        <!-- Service 2 : Accompagnement et transport -->
+        <div class="service fade-in">
+          <h3>Accompagnement & Transport</h3>
+          <p>Une aide précieuse pour vos déplacements et rendez-vous.</p>
+          <ul>
+            <li>
+              <i class="fas fa-car"></i> Transport médical et administratif
+            </li>
+            <li><i class="fas fa-shopping-cart"></i> Courses et livraison</li>
+            <li>
+              <i class="fas fa-hand-holding-heart"></i> Aide aux démarches
+              administratives
+            </li>
+            <li>
+              <i class="fas fa-clock"></i> Service flexible selon vos besoins
+            </li>
+          </ul>
+          <a href="#" class="btn-underline">Découvrir nos services</a>
+        </div>
+      </div>
+      </section>
+
+          <!-- Comment Ça Marche -->
+    <section class="fonctionnement fade-in">
+      <h2>Comment ça marche ?</h2>
+      <p>
+        Un processus simple pour bénéficier de nos services d’aide à domicile.
+      </p>
+      <div class="etapes">
+        <div class="etape">
+          <h3>1. Faites votre demande</h3>
+          <p>
+            Contactez-nous par téléphone ou remplissez notre formulaire en
+            ligne.
+          </p>
+        </div>
+        <div class="etape">
+          <h3>2. Évaluation de vos besoins</h3>
+          <p>
+            Nous définissons ensemble les prestations adaptées à votre
+            situation.
+          </p>
+        </div>
+        <div class="etape">
+          <h3>3. Mise en place de l'aide</h3>
+          <p>
+            Un assistant de vie qualifié intervient chez vous selon vos besoins.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Zone d'Intervention -->
+    <section class="zone fade-in">
+      <div class="zone-contenu">
+        <h2>Notre Zone d'Intervention</h2>
+        <div class="zone-text">
+          <div class="colonne">
+            <p>
+              Nous proposons nos services dans toute la
+              <strong>région lyonnaise</strong>. Que vous soyez à
+              <strong>Lyon, Villeurbanne, Bron, Vénissieux</strong> ou dans les
+              communes voisines, notre équipe intervient avec
+              <strong>professionnalisme</strong> et <strong>réactivité</strong>.
+            </p>
+          </div>
+          <div class="colonne">
+            <p>
+              Vous souhaitez savoir si nous couvrons votre secteur ?
+              <strong>Contactez-nous</strong> et nous nous ferons un plaisir de
+              vous répondre rapidement.
+            </p>
+          </div>
+        </div>
+        <div class="zone-bouton">
+          <a href="#" class="btn-underline">Vérifier ma zone d'intervention</a>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ -->
+    <section class="faq fade-in">
+      <h2>Questions Fréquentes</h2>
+
+      <div class="faq-container">
+        <details>
+          <summary>📌 Quels services proposez-vous ?</summary>
+          <p>
+            Nous offrons une large gamme de services d’aide à domicile : aide
+            aux personnes âgées, accompagnement aux courses et déplacements,
+            aide administrative, et plus encore.
+          </p>
+        </details>
+
+        <details>
+          <summary>📅 Quels sont vos horaires d'intervention ?</summary>
+          <p>
+            Nos assistants de vie sont disponibles 7j/7, selon vos besoins et
+            vos disponibilités.
+          </p>
+        </details>
+
+        <details>
+          <summary>💰 Puis-je bénéficier d’une aide financière ?</summary>
+          <p>
+            Oui, nos services sont éligibles aux aides financières comme l’APA
+            (Allocation Personnalisée d’Autonomie) et le crédit d’impôt.
+          </p>
+        </details>
+
+        <details>
+          <summary>📍 Où intervenez-vous ?</summary>
+          <p>
+            Nous couvrons Lyon et ses alentours : Villeurbanne, Bron,
+            Vénissieux, et d’autres communes proches.
+          </p>
+        </details>
+
+        <details>
+          <summary>📞 Comment réserver une intervention ?</summary>
+          <p>
+            Vous pouvez nous contacter par téléphone ou remplir notre formulaire
+            en ligne pour planifier un rendez-vous.
+          </p>
+        </details>
+      </div>
+    </section>
+  
+          <section class="contact-section">
+        <button class="btn-contact">Demander de l'aide</button>
+      </section>
+    </main>
     <div id="footer"></div>
-</body>
+    <script defer src="../components/header.js"></script>
+    <script defer src="/src/js/aide.js"></script>
+
+  </body>
 </html>
