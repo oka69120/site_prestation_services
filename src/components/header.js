@@ -2,7 +2,7 @@ document.getElementById("header").innerHTML = `
 <header>
     <div class="nav-container">
       <div class="logo">
-      <img src="/images/LogoColorTextBelow.jpeg" alt="RESEAU D'AIDE A DOMICILE" />
+      <img src="/public/images/LogoColorTextBelow.jpeg" alt="RESEAU D'AIDE A DOMICILE" />
     </div>
         <div class="burger-menu" onclick="toggleMenu()">
             <div class="bar"></div>
