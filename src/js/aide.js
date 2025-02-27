@@ -77,3 +77,36 @@ document.addEventListener("footerLoaded", initializeAnimations);
 if (document.getElementById("footer").innerHTML !== "") {
   initializeAnimations();
 }
+
+// -------------------------------------
+document.addEventListener("footerLoaded", function () {
+  console.log("✅ Footer chargé, activation du bouton de remontée !");
+
+  const scrollBtn = document.getElementById("scrollTopBtn");
+
+  if (!scrollBtn) {
+    console.error("❌ Bouton #scrollTopBtn non trouvé !");
+    return;
+  }
+
+  // Afficher le bouton quand on scrolle vers le bas
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      scrollBtn.classList.add("show");
+      scrollBtn.classList.remove("hide");
+    } else {
+      scrollBtn.classList.add("hide");
+      setTimeout(() => scrollBtn.classList.remove("show"), 300);
+    }
+  });
+
+  // Fonction pour remonter en haut avec un effet fluide
+  window.scrollToTop = function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+});
+
+// ⚡ Si le footer est déjà chargé (cas d'un rechargement rapide)
+if (document.getElementById("footer").innerHTML !== "") {
+  document.dispatchEvent(new Event("footerLoaded"));
+}
