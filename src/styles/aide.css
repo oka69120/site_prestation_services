@@ -78,12 +78,6 @@
   background: #f9f9f9;
 }
 
-.presentation h2 {
-  font-size: 2.5em;
-  color: #28a745;
-  margin-bottom: 15px;
-}
-
 .presentation p {
   font-size: 1.2em;
   color: #555;
@@ -177,11 +171,6 @@
   background: #f9f9f9;
   padding: 80px 20px;
   text-align: center;
-}
-
-/* Titre et description */
-.fonctionnement h2 {
-  margin-bottom: 20px;
 }
 
 .fonctionnement p {
@@ -309,14 +298,6 @@
   line-height: 1.8;
   color: #333;
   margin-bottom: 15px;
-}
-
-/* 📍 Ajout d’une icône de localisation avant le titre */
-.zone h2::before {
-  content: "📍";
-  font-size: 2rem;
-  display: block;
-  margin-bottom: 10px;
 }
 
 /* 🔥 Effet d'animation au survol */

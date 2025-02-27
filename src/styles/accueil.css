@@ -173,12 +173,6 @@
   background-color: #f9f9f9;
 }
 
-.services h2 {
-  font-size: 2.5rem;
-  color: #55b747;
-  margin-bottom: 40px;
-}
-
 /* Conteneur des services */
 .services-container {
   display: flex;
@@ -288,12 +282,6 @@
 .why-choose-us h3 {
   color: #000;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 🔥 Ajoute une ombre légère pour contraste */
-}
-
-.why-choose-us h2 {
-  font-size: 2.5rem;
-  color: #55b747;
-  margin-bottom: 40px;
 }
 
 /* Timeline */
@@ -407,13 +395,6 @@
   text-align: center;
 }
 
-/* Titre centré */
-.zone-intervention h2 {
-  font-size: 2.5rem;
-  color: #55b747;
-  margin-bottom: 40px;
-}
-
 /* Wrapper pour aligner texte et image */
 .content-wrapper {
   display: flex;
@@ -484,10 +465,6 @@
     padding: 60px 5%;
   }
 
-  .zone-text h2 {
-    font-size: 1.8rem;
-  }
-
   .zone-text p {
     font-size: 1rem;
   }
@@ -516,15 +493,6 @@
   background: url("src/images/pattern.png") repeat;
   opacity: 0.1; /* Texture très légère */
   z-index: 0;
-}
-
-/* Titre */
-.testimonials h2 {
-  font-size: 2.5rem;
-  color: #55b747;
-  margin-bottom: 40px;
-  position: relative;
-  z-index: 1;
 }
 
 /* Conteneur des témoignages */

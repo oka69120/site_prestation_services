@@ -27,7 +27,7 @@ document.getElementById("header").innerHTML = `
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
-                    </div>
+      </div>
 </header>
 `;
 // Animation GSAP
