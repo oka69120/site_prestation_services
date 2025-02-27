@@ -9,6 +9,7 @@
 body {
   background-color: #55b747;
   color: #333;
+  padding-top: 70px;
 }
 main {
   color: #333;
@@ -17,7 +18,7 @@ main {
 header {
   background-color: #28a745;
   color: white;
-  padding: 5px;
+  padding: 3px;
   text-align: center;
   z-index: 9999;
   position: relative;
@@ -90,7 +91,7 @@ header {
 /* Social icons */
 .social-icons {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   align-items: center;
 }
 
@@ -133,10 +134,10 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px;
   transition: opacity 0.5s ease-in-out;
-  background-color: rgba(40, 167, 69, 0.95); /* Légère transparence */
+
   color: white;
-  padding: 20px;
   position: relative;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -502,4 +503,34 @@ bouton
 #scrollTopBtn.hide {
   opacity: 0;
   transform: translateY(10px);
+}
+
+/* -------------------------------
+-------------------------------
+--------------------------------- */
+/* ---- Menu sticky par défaut (opaque au chargement) ---- */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+
+  z-index: 1000;
+}
+
+/* ✅ Quand on est en haut de la page, le menu est totalement opaque */
+#navbar.at-top {
+  background: rgba(40, 167, 69, 1); /* Opaque */
+}
+
+/* ✅ Quand on descend, le menu disparaît progressivement */
+#navbar.at-top {
+  background: rgba(40, 167, 69, 1); /* Opaque */
+}
+
+/* ✅ Quand on remonte mais qu'on n'est pas encore en haut, le menu devient transparent */
+#navbar.transparent {
+  background: rgba(40, 167, 69, 0.6); /* Vert semi-transparent */
 }

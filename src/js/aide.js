@@ -80,8 +80,6 @@ if (document.getElementById("footer").innerHTML !== "") {
 
 // -------------------------------------
 document.addEventListener("footerLoaded", function () {
-  console.log("✅ Footer chargé, activation du bouton de remontée !");
-
   const scrollBtn = document.getElementById("scrollTopBtn");
 
   if (!scrollBtn) {
@@ -109,4 +107,63 @@ document.addEventListener("footerLoaded", function () {
 // ⚡ Si le footer est déjà chargé (cas d'un rechargement rapide)
 if (document.getElementById("footer").innerHTML !== "") {
   document.dispatchEvent(new Event("footerLoaded"));
+}
+
+// ---------------------------
+// ----------------------------
+// ----------------------------
+document.addEventListener("headerLoaded", function () {
+  let lastScrollY = window.scrollY;
+  const navbar = document.getElementById("navbar");
+
+  if (!navbar) {
+    return;
+  }
+
+  // ✅ S'assurer que le menu est opaque au chargement
+  navbar.classList.add("at-top");
+
+  window.addEventListener("scroll", () => {
+    let currentScrollY = window.scrollY;
+
+    // ✅ Si on descend rapidement, cacher le menu avec GSAP
+    if (currentScrollY > lastScrollY && currentScrollY > 50) {
+      gsap.to(navbar, {
+        y: "-100%",
+        opacity: 0,
+        duration: 0.3,
+        ease: "power2.out",
+      });
+    }
+    // ✅ Si on remonte, réafficher le menu avec GSAP
+    else {
+      gsap.to(navbar, {
+        y: "0%",
+        opacity: 1,
+        duration: 0.3,
+        ease: "power2.out",
+      });
+
+      // ✅ Si on remonte mais qu'on n'est pas encore en haut, rendre le menu transparent
+      if (currentScrollY > 50) {
+        navbar.classList.add("transparent");
+      } else {
+        navbar.classList.remove("transparent");
+      }
+    }
+
+    // ✅ Quand on arrive tout en haut, le menu devient normal
+    if (currentScrollY === 0) {
+      navbar.classList.add("at-top");
+    } else {
+      navbar.classList.remove("at-top");
+    }
+
+    lastScrollY = currentScrollY;
+  });
+});
+
+// ⚡ Si le header est déjà chargé (cas d'un rechargement rapide)
+if (document.getElementById("header").innerHTML !== "") {
+  document.dispatchEvent(new Event("headerLoaded"));
 }

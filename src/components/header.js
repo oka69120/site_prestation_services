@@ -1,6 +1,6 @@
 document.getElementById("header").innerHTML = `
-<header>
-    <div class="nav-container">
+<header  id="navbar">
+    <div class="nav-container" >
       <div class="logo">
       <img src="/public/images/LogoColorTextBelow.jpeg" alt="RESEAU D'AIDE A DOMICILE" />
     </div>
@@ -30,6 +30,7 @@ document.getElementById("header").innerHTML = `
       </div>
 </header>
 `;
+document.dispatchEvent(new Event("headerLoaded"));
 // Animation GSAP
 gsap.from("header", { duration: 1, y: -50, opacity: 0, ease: "bounce" });
 // Fonction pour gérer l'affichage du menu mobile
