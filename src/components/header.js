@@ -1,7 +1,9 @@
 document.getElementById("header").innerHTML = `
 <header>
     <div class="nav-container">
-        <h1>Prestation de Services</h1>
+      <div class="logo">
+      <img src="/images/LogoColorTextBelow.jpeg" alt="RESEAU D'AIDE A DOMICILE" />
+    </div>
         <div class="burger-menu" onclick="toggleMenu()">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -14,7 +16,18 @@ document.getElementById("header").innerHTML = `
             <a href="/garderie" onclick="navigate(event)">Garderie</a>
             <a href="/menage" onclick="navigate(event)">Ménage</a>
         </nav>
-    </div>
+
+        <div class="phone-container">
+          <a href="tel:+33123456789" class="phone-number">
+              <i class="fas fa-phone-alt"></i> <span class="phone-text">+33 1 23 45 67 89</span>
+          </a>
+        </div>
+
+            <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+                    </div>
 </header>
 `;
 // Animation GSAP

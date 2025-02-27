@@ -22,6 +22,89 @@ header {
   z-index: 9999;
   position: relative;
 }
+/* 🔥 Ajustement du logo */
+.logo img {
+  max-height: 50px; /* Limite la hauteur du logo */
+  width: auto; /* Garde les proportions */
+  object-fit: contain; /* Évite toute déformation */
+}
+/* 🔥 Conteneur du téléphone */
+.phone-container {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* 🔥 Lien du numéro */
+.phone-container a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* 🔥 Icône du téléphone */
+.phone-container i {
+  margin-right: 8px;
+  font-size: 1.4rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* 🆕 Effet au survol */
+.phone-container:hover,
+.phone-container a:hover {
+  color: #ffd700; /* Changement de couleur */
+  transform: scale(1.2); /* Légère augmentation */
+}
+/* 📱 Cacher le texte du numéro et ne laisser que l'icône sur mobile */
+@media screen and (max-width: 768px) {
+  .phone-text {
+    display: none; /* Cache le numéro */
+  }
+
+  .phone-container {
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .phone-container i {
+    margin: 0;
+    font-size: 1.6rem;
+  }
+
+  /* 🆕 Effet au survol pour mobile */
+  .phone-container:hover {
+    color: #ffd700;
+    transform: scale(1.2);
+  }
+}
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffd700;
+  transform: scale(1.2);
+}
 
 /* 🔥 Police principale des titres */
 h1,

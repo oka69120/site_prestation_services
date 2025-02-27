@@ -1,11 +1,17 @@
-function navigate(event) {
+function navigate(event, path = null) {
   event.preventDefault();
-  const path = event.target.getAttribute("href").substring(1);
+
+  if (!path) {
+    path = event.target.getAttribute("href").substring(1);
+  }
+
   window.history.pushState({}, path, window.location.origin + "/" + path);
   loadPage(path);
 }
 
 function loadPage(page) {
+  window.scrollTo(0, 0); // ✅ Retourne en haut de la page
+
   fetch(`src/pages/${page}.html`)
     .then((response) => response.text())
     .then((html) => {
