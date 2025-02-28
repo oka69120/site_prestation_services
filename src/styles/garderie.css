@@ -6,7 +6,8 @@
 /* Bannière principale */
 .hero {
   position: relative;
-  background: url("/src/images/garde-enfants-scaled.jpg") no-repeat center/cover;
+  background: url("/public/images/garde-enfants-scaled.jpg") no-repeat
+    center/cover;
   color: white;
   text-align: center;
   padding: 80px 20px;
