@@ -19,6 +19,9 @@
   height: 70vh;
   max-height: 600px; /* Empêche l'image d'être trop grande sur les grands écrans */
 }
+.hero .btn-underline {
+  background-color: #fccc44;
+}
 
 /* Overlay sombre pour améliorer la lisibilité du texte */
 .hero::before {
@@ -38,12 +41,6 @@
 .hero .btn-underline {
   position: relative;
   z-index: 2;
-}
-
-.hero h1 {
-  font-size: 4rem;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
 }
 
 .hero p {
@@ -68,11 +65,6 @@
 
   .hero p {
     display: none;
-  }
-
-  .btn-underline {
-    font-size: 1rem;
-    padding: 10px 10px;
   }
 }
 

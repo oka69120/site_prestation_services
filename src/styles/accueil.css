@@ -22,6 +22,9 @@
   z-index: 1;
   overflow: hidden;
 }
+.hero .btn-underline {
+  background-color: #fccc44;
+}
 
 /* Réduction de l’image */
 @keyframes shrinkImage {
@@ -59,15 +62,6 @@
   );
   z-index: -1;
 }
-
-@media screen and (max-width: 768px) {
-  .hero::before {
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Filtre noir uniforme */
-  }
-}
-
 /* Style du texte */
 .hero h1 {
   font-size: 3rem;
@@ -84,7 +78,7 @@
 @media screen and (max-width: 768px) {
   .hero {
     align-items: center; /* Centre le texte uniquement sur petits écrans */
-    text-align: center;
+    height: 60vh;
   }
 
   .hero-content {
@@ -97,7 +91,17 @@
 
   .hero p {
     font-size: 1.2rem;
-    margin: 40px 40px;
+    margin: 20px 20px;
+  }
+  .hero-title {
+    margin: 20px;
+    font-size: 2.5rem;
+    margin-top: 20px;
+  }
+  .hero::before {
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Filtre noir uniforme */
   }
 }
 /* 🔥 Style du H1 de la section Hero */
@@ -127,29 +131,18 @@
   width: 50%;
 }
 
-/* 📱 Responsive pour mobile */
-@media screen and (max-width: 768px) {
-  .hero-title {
-    margin: 20px;
-    font-size: 2.5rem;
-    margin-top: 20px;
-  }
-}
-
 /* 🔥 Conteneur des images dans hero-title */
 .hero-images {
   display: flex;
   gap: 40px; /* Espace entre les images */
   justify-content: center;
   align-items: center;
-  max-width: 80%;
 }
 
 /* 🔥 Style des images */
 .hero-images img {
-  width: 48%; /* Chaque image prend environ la moitié de la largeur */
+  width: 30%; /* Chaque image prend environ la moitié de la largeur */
   height: auto;
-  border-radius: 10px; /* Coins arrondis pour un effet plus esthétique */
   transition: transform 0.3s ease-in-out;
 }
 
@@ -158,10 +151,78 @@
   transform: scale(1.05); /* Légère animation au survol */
 }
 
-/* 📱 Masquage des images sur mobile */
-@media screen and (max-width: 768px) {
-  .hero-images {
-    display: none;
+/* ---- Section "Qui sommes-nous ?" ---- */
+.about-us {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Effet relevé */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.about-us:hover {
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1;
+  padding-right: 30px;
+}
+
+.about-text h2 {
+  font-size: 2.5em;
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* ---- Image de la section ---- */
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ---- Responsive pour mobiles ---- */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .about-text h2 {
+    font-size: 2.2em;
+  }
+
+  .about-image img {
+    width: 90%;
   }
 }
 

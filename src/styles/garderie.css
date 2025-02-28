@@ -10,7 +10,7 @@
     center/cover;
   color: white;
   text-align: center;
-  padding: 80px 20px;
+  padding: 50px 20px;
 }
 
 .hero::before {
@@ -20,7 +20,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.3); /* Plus foncé */
 }
 
 .hero-content {
@@ -41,6 +40,12 @@
   border-color: #28a745; /* Bordure plus vive */
 }
 
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .hero-content p {
+    display: none;
+  }
+}
 .hero h1 {
   font-size: 2.8rem;
   font-weight: 700;
@@ -51,14 +56,15 @@
 }
 
 .hero p {
-  color: #333; /* Noir */
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.5;
   opacity: 0.9;
 }
+.hero .btn-underline {
+  background-color: #fccc44;
+}
 
-/* Section Présentation */
 /* Section Présentation */
 .presentation {
   text-align: center;
